@@ -180,7 +180,28 @@ const FEYN = [
         ],
       },
     },
-    // TODO: Add "Ferbois"
+    {
+      id: "24",
+      name: "Ferbois",
+      level: 6,
+      category: "Création",
+      time: "1 heure",
+      duration: "Permanent",
+      componentCost: 75,
+      marketPrice: 360,
+      keySkill: "Nature",
+      description: "Vous modifiez une certaine quantité de bois pour lui donner la force et la solidité de l'acier. Le DD pour briser ou percer le bois augmente de 5. Le bois gagne aussi une résistance 10 à tout les dégâts.\n\nVotre test de nature détermine la quantité de bois que vous pouvez affecter grâce à ce rituel.",
+      needTable: true,
+      table: {
+      headCells: ["Résultat du test", "Taille"],
+        data: [
+          ["19 ou moins", "Objet de taille moyenne"],
+          ["20-29", "Objet de grande taille"],
+          ["30-39", "Objet de très grande taille"],
+          ["40 ou plus", "Objet de taille gargantuesque"],
+        ],
+      },
+    },
     {
       id: "9",
       name: "Feu d'explorateur",
