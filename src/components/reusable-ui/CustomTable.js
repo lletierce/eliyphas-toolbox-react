@@ -33,6 +33,9 @@ export default function CustomTable({
 }
 
 const CustomTableStyled = styled.table`
+width: 100%;
+max-width: 400px;
+
   th {
     padding: 5px 10px;
       background-color: rgb(7, 55, 99);

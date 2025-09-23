@@ -77,8 +77,9 @@ const RitualDescriptionPageStyled = styled.div`
   padding: 10px;
   
   .description{
+    width: 100%;
     max-width: 400px;
-    text-align: justify;
+    /* text-align: justify; */
     margin-bottom: 20px;
     white-space: pre-line; /* or pre-wrap | Fix '\n' for string in rendering react component */
   }
