@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/eliyphas-toolbox-react/static/css/main.e6c13ad2.css",
-    "main.js": "/eliyphas-toolbox-react/static/js/main.ed564250.js",
+    "main.js": "/eliyphas-toolbox-react/static/js/main.55deb4a1.js",
     "static/js/453.d840508d.chunk.js": "/eliyphas-toolbox-react/static/js/453.d840508d.chunk.js",
     "index.html": "/eliyphas-toolbox-react/index.html",
     "main.e6c13ad2.css.map": "/eliyphas-toolbox-react/static/css/main.e6c13ad2.css.map",
-    "main.ed564250.js.map": "/eliyphas-toolbox-react/static/js/main.ed564250.js.map",
+    "main.55deb4a1.js.map": "/eliyphas-toolbox-react/static/js/main.55deb4a1.js.map",
     "453.d840508d.chunk.js.map": "/eliyphas-toolbox-react/static/js/453.d840508d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.ed564250.js"
+    "static/js/main.55deb4a1.js"
   ]
 }
