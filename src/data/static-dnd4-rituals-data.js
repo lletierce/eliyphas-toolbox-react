@@ -529,6 +529,157 @@ const FEYN = [
       ],
     },
   },
+  {
+    id: "26",
+    name: "Prison primale",
+    level: 14,
+    category: "Coercition",
+    time: "1 heure",
+    duration: "Permanent (spéciale)",
+    componentCost: 1600,
+    marketPrice: 4200,
+    keySkill: "Nature",
+    description: `
+    Vous emprisonnez une créature adjacente dans un arbre, un rocher ou un autre objet naturel solide. Le sujet doit être sans défense ou consentant, et l'objet dans lequel vous l'emprisonnez doit être plus grand que lui. Votre test de Nature détermine le niveau maximal du sujet.\n
+    Le sujet reste emprisonné jusqu'à ce que vous choisissiez de mettre fin au rituel ou jusqu'à votre mort. De plus, vous devez prendre au sujet un de ses effets personnels et le cacher ou le conserver sur vous. Si l'effet personnel est amené à l'endroit où se trouve le sujet, ce dernier peut être libéré.\n
+    Vous pouvez choisir si le sujet continue de vieillir durant son emprisonnement et s'il est conscient de son environnement. La destruction de l'objet qui emprisonne le sujet libère celui-ci et le fait réapparaître dans l'espace de l'objet, en péril et inconscient. Quelle que soit la distance qui vous en sépare, vous savez si l'objet est détruit.\n
+    L'objet dans lequel il est emprisonné adopte une légère ressemblance avec le sujet. À la surface d'un arbre, des noeuds aux traits du sujet peuvent se former, ou une pierre peut prendre une coloration dessinant vaguement sa silhouette.
+    `,
+    needTable: true,
+    table: {
+      headCells: ["Résultat du test", "Niv. max"],
+      data: [
+        ["14 ou moins", "Votre niveau - 5"],
+        ["15-24", "Votre niveau"],
+        ["25 ou plus", "Votre niveau + 2"],
+      ],
+    },
+  },
+  {
+    id: "27",
+    name: "Sceau de mémoire",
+    level: 18,
+    category: "Coercition",
+    time: "1 heure",
+    duration: "Permanent",
+    componentCost: 7000,
+    marketPrice: 25000,
+    keySkill: "Arcanes",
+    description: `
+    Vous enfermez un souvenir unique afin que la créature ciblée ne puisse plus s'en souvenir. Un souvenir unique scellé par ce rituel peut être spécifique (« me voir voler le sceptre Darlingian » ou « comment entrer dans mon laboratoire secret ») ou général (« ce que vous avez lu dans mon journal » ou « la dernière conversation que vous avez eue aujourd'hui »).\n
+    La cible de ce rituel doit être consentante ou sans défenses pendant toute la durée du rituel. Vous ne pouvez vous choisir comme cible pour ce rituel que si vous disposez d'au moins un assistant pour l'accomplir. Sur une cible non consentante, le résultat de votre jet d'Arcana doit être supérieur à la défense de Volonté de la cible pour que le rituel réussisse, en plus de déterminer la difficulté du rituel pour la cible (en termes de dégâts ; voir ci-dessous).
+    `,
+    needTable: true,
+    table: {
+      headCells: ["Résultat du test", "Effet sur la cible"],
+      data: [
+        ["24 ou moins", "Dégâts égaux au nombre maximal de points de vie de la cible."],
+        ["25-29", "Dégâts égaux aux trois quarts du nombre maximal de points de vie de la cible."],
+        ["30-34", "Dégâts égaux à la moitié du nombre maximal de points de vie de la cible."],
+        ["35-39", "Dégâts égaux au quart du nombre maximal de points de vie de la cible."],
+        ["40 ou plus", "Aucun dégât."],
+      ],
+    },
+  },
+  {
+    id: "28",
+    name: "Terrain hallucinatoire",
+    level: 8,
+    category: "Tromperie",
+    time: "10 minutes",
+    duration: "24 heures",
+    componentCost: 125,
+    marketPrice: 680,
+    keySkill: "Arcanes",
+    description: `
+    Vous jetez un sort d'illusion sur une zone de terrain naturel, d'une taille maximale de 20 cases sur 20, afin de lui donner l'apparence, les sons et les odeurs d'un autre type de terrain naturel. Les structures artificielles, l'équipement et les créatures ne peuvent pas être modifiés. Une prairie peut ressembler à une colline, un étang peut ressembler à une prairie, mais une route ou une tour dans la zone reste inchangée.\n
+    Une créature peut discerner l'illusion si elle réussit un jet d'Arcana ou de Perception (DD 10 + votre modificateur de jet d'Arcana). Ce jet est au prix d'une action mineure si la créature n'a pas interagi avec l'illusion, mais peut être effectué comme une action libre la première fois que la créature interagit avec l'illusion. Si vous dissimulez une zone de terrain difficile, une créature a toujours droit à un jet de sauvegarde si elle est forcée d'entrer dans ce terrain.
+    `,
+    needTable: false,
+    table: {},
+  },
+  {
+    id: "29",
+    name: "Message à distance",
+    level: 6,
+    category: "Exploration",
+    time: "5 minutes",
+    duration: "Instantanée",
+    componentCost: 50,
+    marketPrice: 360,
+    keySkill: "Arcanes",
+    description: `
+    Vous faites parvenir un court message de 25 mots ou moins à une créature avec laquelle vous êtes familier. La créature entend le message dans son esprit. Elle vous reconnaît en tant qu'émetteur si elle vous connaît. Et elle peut répondre immédiatement, de la même manière.\n
+    Vous pouvez envoyer le message sans égard à la distance mais la créature doit se trouver sur le même plan.
+    `,
+    needTable: false,
+    table: {},
+  },
+  {
+    id: "30",
+    name: "Visualisation de lieu",
+    level: 14,
+    category: "Scrutation",
+    time: "1 heure",
+    duration: "Spéciale",
+    componentCost: "1 600 po plus un focus d'une valeur de 1 000 po",
+    marketPrice: 4200,
+    keySkill: "Arcanes",
+    description: `
+    Lorsque vous accomplissez ce rituel, choisissez un lieu où vous vous êtes déjà rendu. Il doit s'agir d'un endroit fixe (il vous est par exemple impossible de voir l'intérieur d'une cabine de bateau voguant sur l'océan), et qui se trouve à la même place (et avec plus ou moins la même forme) que la dernière fois où vous y êtes allé. Refaire la décoration d'une pièce n'empêchera pas le rituel de s'accomplir. IIl ne pourra en revanche pas vous montrer une tour détruite et rebâtie selon de nouveaux plans (à moins que vous n'ayez visité la nouvelle construction). Vous savez si le rituel a échoué avant de perdre vos composantes.\n
+    Ce rituel peut vous montrer n'importe quel endroit au monde, mais il n'opère pas sur un autre plan. 
+    Le rituel crée un capteur de scrutation (un miroitement dans l'air) que toute créature attentive peut remarquer, à condition de réussir un test de Perception contre un DD 10 + votre niveau. Il est impossible de le faire disparaître ou d'agir sur lui de toute autre manière.\n
+    Le capteur vous permet de voir et d'entendre à travers lui, sans compter qu'il vous confère la vision dans le noir. Utilisez la compétence Perception pour déterminer si vous entendez des sons étouffés ou remarquez des choses peu visibles en observant la zone.\n
+    Le capteur reste pendant un nombre de rounds déterminé par votre test d'Arcanes.
+
+    Une magie de protection suffisamment puissante, comme l'interdiction, empêche toute visualisation de lieu. Si l'endroit visé est protégé de telle manière, vous vous en rendez compte au tout début du rituel, et vous pouvez l'interrompre sans perdre aucune composante.\n
+    Focus: un miroir ou une boule de cristal d'une valeur minimale de 1 000 po. C'est le focus qui vous transmet tout ce que vous voyez ou entendez.
+    `,
+    needTable: true,
+    table: {
+      headCells: ["Résultat du test", "Durée"],
+      data: [
+        ["19 ou moins", "1 round"],
+        ["20-24", "2 rounds"],
+        ["25-29", "3 rounds"],
+        ["30-39", "4 rounds"],
+        ["40 ou plus", "5 rounds"],
+      ],
+    },
+  },
+  {
+    id: "31",
+    name: "Visualisation d'objet",
+    level: 18,
+    category: "Scrutation",
+    time: "1 heure",
+    duration: "Spéciale",
+    componentCost: "7 000 po plus un focus d'une valeur de 5 000 po",
+    marketPrice: 17200,
+    keySkill: "Arcanes",
+    description: `
+    Lorsque vous accomplissez ce rituel, choisissez un objet, au maximum de taille G. II n'est pas nécessaire que vous ayez eu cet objet en main, ni même que vous l'ayez déjà vu. Vous devez malgré tout le décrire avec suffisamment de clarté, de façon à ce que le rituel soit en mesure de l'identifier sans ambiguïté.\n
+    "L'épée large ancestrale du duc Karlerren" suffit, de même que "la pièce d'or la plus proche", mais pas "le plus puissant objet magique des environs". Ce rituel peut vous montrer n'importe quel objet sur ce monde, mais pas un objet se trouvant sur un autre plan.\n
+    La magie du rituel interprète votre description le plus fidèlement possible. Si elle ne suffit pas à identifier un objet précis. Le rituel échoue, mais vous ne perdez aucune composante. Si votre description est exacte, mais que l'objet montré n'est pas celui auquel vous vous attendiez (par exemple, si la pièce d'or la plus proche se trouve dans votre poche et non dans la salle du trésor à laquelle vous pensiez), le rituel fonctionne tout de même et les composantes sont perdues.\n
+    Ce rituel ne vous offre aucun moyen de savoir où se trouve cet objet par rapport à vous, mais un examen attentif de son environnement pourra peut-être vous mettre sur la voie. Si vous voyez l'épée du duc accrochée à un mur de pierre, vous ne saurez pas à coup sûr à quel endroit de la ville se trouve ce mur, ni même dans quelle ville.\n
+    Le rituel crée un capteur de scrutation (un miroitement dans l'air) que toute créature attentive peut remarquer, à condition de réussir un test de Perception contre un DD 10+ votre niveau. Il est impossible de le faire disparaître ou d'agir sur lui de toute autre manière.\n
+    Le capteur vous permet de voir et d'entendre à travers lui, sans compter qu'il vous confère la vision dans le noir. Utilisez la compétence Perception pour déterminer si vous entendez des sons étouffés ou remarquez des choses peu visibles en observant la zone.\n
+    Le capteur reste pendant un nombre de rounds déterminé par votre test d'Arcanes, sachant qu'il se déplace avec l'objet durant toute la durée du rituel.\n
+    Une magie de protection suffisamment puissante, comme Interdiction, empêche toute visualisation d'objet. Si l'endroit visé est protégé de telle manière, vous vous en rendez compte au tout début du rituel, et vous pouvez l'interrompre sans perdre aucune composante.\n
+    Focus : un miroir ou une boule de cristal d'une valeur minimale de 5 000 po. C'est le focus qui vous transmet tout ce que vous voyez ou entendez.    
+  `,
+    needTable: true,
+    table: {
+      headCells: ["Résultat du test", "Durée"],
+      data: [
+        ["19 ou moins", "1 round"],
+        ["20-24", "2 rounds"],
+        ["25-29", "3 rounds"],
+        ["30-39", "4 rounds"],
+        ["40 ou plus", "5 rounds"],
+      ],
+    },
+  },
 ];
 
 const OTHER = [];
